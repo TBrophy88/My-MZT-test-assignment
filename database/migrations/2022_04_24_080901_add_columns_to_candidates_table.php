@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('candidates', function (Blueprint $table) {
-            $table->boolean('contacted')->default(FALSE);
-            $table->boolean('hired')->default(FALSE);
+            $table->boolean('contacted')->default(false);
+            $table->boolean('hired')->default(false);
         });
     }
 

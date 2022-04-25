@@ -18,5 +18,14 @@ Route::get('/', function () {
     return view('homepage');
 });
 
-Route::get('candidates-list', [CandidateController::class, 'index']);
+Route::get('candidates', [CandidateController::class, 'index']);
+Route::get('candidates-list', [CandidateController::class, 'list']);
 Route::post('candidates-contact', [CandidateController::class, 'contact']);
+Route::post('candidates-hire', [CandidateController::class, 'hire']);
+
+Route::get('/contact-mailable', function () {
+    return new App\Mail\ContactCandidate;
+});
+Route::get('/hire-mailable', function () {
+    return new App\Mail\HireCandidate;
+});
