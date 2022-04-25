@@ -4,7 +4,6 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-//import "./bootstrap";
 import { createPinia, PiniaVuePlugin } from "pinia";
 import Vue from "vue";
 
